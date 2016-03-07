@@ -1,0 +1,10 @@
+Package: SecKW
+Type: Package
+Title: The SecKW Distribution
+Version: 0.1
+Date: 2016-01-05
+Author: Luciano Serafim [aut, cre]
+Maintainer: Luciano Serafim de Souza <lucianoserafimdesouza@gmail.com>
+Description: Density, distribution function, quantile function, random generation and survival function.
+License: GPL (>= 2)
+LazyData: TRUE
