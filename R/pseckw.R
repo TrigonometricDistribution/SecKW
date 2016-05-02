@@ -10,12 +10,21 @@
 #   Check Package:             'Ctrl + Shift + E'
 #   Test Package:              'Ctrl + Shift + T'
 
-pseckw<-function(q,a,b,c,lambda,lower = T,log.p = FALSE){
+pseckw<-function(q,a,b,c,lambda,lower = TRUE,log.p = FALSE){
   library(pracma)
-  if (lower == T) {
-    (sec((pi/3)*(1-(1-(1-exp(-(lambda*q)^(c))^(a))^(b))))-1)
-  }else{
-    (2-sec((pi/3)*(1-(1-(1-exp(-(lambda*q)^(c))^(a))^(b)))))
+
+  if (log.p == TRUE) {
+    if (lower == TRUE) {
+      log((sec((pi/3)*(1-(1-(1-exp(-(lambda*q)^(c))^(a))^(b))))-1))
+    }else{
+      log((2-sec((pi/3)*(1-(1-(1-exp(-(lambda*q)^(c))^(a))^(b))))))
+    }
+  } else {
+    if (lower == TRUE) {
+      (sec((pi/3)*(1-(1-(1-exp(-(lambda*q)^(c))^(a))^(b))))-1)
+    }else{
+      (2-sec((pi/3)*(1-(1-(1-exp(-(lambda*q)^(c))^(a))^(b)))))
+    }
   }
 
 }
