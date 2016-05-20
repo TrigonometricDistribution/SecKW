@@ -1,25 +1,28 @@
-# rseckw
-#
-# You can learn more about package authoring with RStudio at:
-#
-#   http://r-pkgs.had.co.nz/
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Build and Reload Package:  'Ctrl + Shift + B'
-#   Check Package:             'Ctrl + Shift + E'
-#   Test Package:              'Ctrl + Shift + T'
+#' Generates random deviates from a SecantKumaraswamyWeibull probability distribution.
+#'
+#' @param n Number of observations to be generated.
+#' @param a A parameter.
+#' @param b B parameter.
+#' @param c C parameter.
+#' @param lambda Lambda parameter.
+#' @return A vector with n observations of the SecantKumaraswamyWeibull distribution.
+#' @examples
+#' rseckw(1, 1, 1, 1, 1)
+#' rseckw(1, 2, 2, 1, 1)
 
-rseckw<-function(n,a,b,c,beta,lambda){
+rseckw<-function(n,a,b,c,lambda){
   require(pracma)
-  y=asec(1+0.999999999)
-  limsup = (-1/lambda)*(log(1-(1-(1-((3/pi)*y)^(1/beta))^(1/b))^(1/a)))^(1/c)
+  library(fdrtool)
+
   accept = c()
   count = 0
+
   while (length(accept) < n){
-    u = runif(1,0,limsup)
-    x = runif(1,0,limsup)
-    if(dunif(x, 0, limsup)*u <= dseckw(x,a,b,c,beta,lambda)) {
+
+    U <- rhalfnorm(1)
+    x <- rhalfnorm(1)
+
+    if(U <= dseckw(x,a,b,c,lambda)/(sqrt(pi)*dhalfnorm(x)/sqrt(2))) {
       accept[count] = x
       count = count + 1
     }
