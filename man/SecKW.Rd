@@ -5,13 +5,10 @@
 \alias{qseckw}
 \alias{rseckw}
 \alias{sseckw}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
 The SecKW Distribution
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
 Density, distribution function, quantile function, random generation and survival function for the sine weibull inverse distribution with.
 }
 \usage{
@@ -21,7 +18,6 @@ qseckw(p, a, b, c, beta, lambda, lower = T, log.p = FALSE)
 rseckw(n, a, b, c, beta, lambda)
 sseckw(x, a, b, c, beta, lambda)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{x, q}{
   vector of quantiles.
@@ -43,15 +39,9 @@ sseckw(x, a, b, c, beta, lambda)
   }
 }
 \details{
-%%  ~~ If necessary, more details than the description above ~~
 Detalhes.
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
 dseckw gives the density, pseckw gives the distribution function, qseckw gives the quantile function, rseckw generates random deviates and sseckw gives the survival function.
 
 The length of the result is determined by n for rseckw, and is the maximum of the lengths of the numerical arguments for the other functions.
@@ -59,28 +49,19 @@ The length of the result is determined by n for rseckw, and is the maximum of th
 The numerical arguments other than n are recycled to the length of the result.
 }
 \references{
-%% ~put references to the literature/web site here ~
-Referencias.
+SOUZA, L. New Trigonometric Class of Probabilistic Distributions. 219 p. Thesis (Doctorate in Biometry and Applied Statistics) - Department of Statistics and Information, Federal Rural University of Pernambuco, Recife, Pernambuco, 2015.
+
+BRITO, C. C. R. Method Distributions generator and Probability Distributions Classes. 241 p. Thesis (Doctorate in Biometry and Applied Statistics) - Department of Statistics and Information, Federal Rural University of Pernambuco, Recife, Pernambuco, 2014.
 }
 \author{
-%%  ~~who you are~~
-Autores.
+Dr. Luciano Souza, Luciano Serafim de Souza and Ms. Lucas Gallindo.
 }
-\note{
-%%  ~~further notes~~
-Nota.
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-Ajuda.
+The \href{http://artax.karlin.mff.cuni.cz/r-help/library/VGAM/html/kumar.html}{kumaraswamy} distribution.
+
+The \href{https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Weibull.html}{weibull} distribution.
 }
 \examples{
-## The function is currently defined as
-x = rseckw(100,1,1,1,1,1)
-hist(x,probability=TRUE,ylim = c(0,.5))
-curve(dseckw(x,1,1,1,1,1),add=TRUE)
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
+x = rseckw(1000,1,1,1,1)
+hist(x,probability = T,border = 0,ylim = c(0,1),xlim = c(0,5),main = "",ylab = "Density",lty = 2,lwd=2)
+curve(dseckw(x,1,1,1,1),add = T,lty=1,lwd=2,col=1)

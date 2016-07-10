@@ -1,14 +1,14 @@
-# pseckw
-#
-# You can learn more about package authoring with RStudio at:
-#
-#   http://r-pkgs.had.co.nz/
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Build and Reload Package:  'Ctrl + Shift + B'
-#   Check Package:             'Ctrl + Shift + E'
-#   Test Package:              'Ctrl + Shift + T'
+#' The cumulative function of the SecantKumaraswamyWeibull probability distribution.
+#'
+#' @param q Vector of quantiles.
+#' @param a A parameter.
+#' @param b B parameter.
+#' @param c C parameter.
+#' @param lambda Lambda parameter.
+#' @return A vector with n observations of the SecantKumaraswamyWeibull distribution.
+#' @examples
+#' pseckw(q, 1, 1, 1, 1,TRUE,FALSE)
+#' pseckw(q, 3, 0.5, 2, 2,TRUE,FALSE)
 
 pseckw<-function(q,a,b,c,lambda,lower = TRUE,log.p = FALSE){
   library(pracma)
