@@ -15,7 +15,7 @@ Density, distribution function, quantile function, random generation and surviva
 \usage{
 dseckw(x, a, b, c, lambda)
 pseckw(q, a, b, c, lambda, lower = TRUE, log.p = FALSE)
-qseckw(p, a, b, c, beta, lambda, lower = TRUE, log.p = FALSE)
+qseckw(p, a, b, c, lambda, lower = TRUE, log.p = FALSE)
 rseckw(n, a, b, c, lambda)
 hseckw(x, a, b, c, lambda)
 sseckw(x, a, b, c, lambda)
