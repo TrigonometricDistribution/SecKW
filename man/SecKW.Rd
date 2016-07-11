@@ -4,6 +4,7 @@
 \alias{pseckw}
 \alias{qseckw}
 \alias{rseckw}
+\alias{hseckw}
 \alias{sseckw}
 \title{
 The SecKW Distribution
@@ -12,11 +13,12 @@ The SecKW Distribution
 Density, distribution function, quantile function, random generation and survival function for the sine weibull inverse distribution with.
 }
 \usage{
-dseckw(x, a, b, c, beta, lambda)
-pseckw(q, a, b, c, beta, lambda, lower = T, log.p = FALSE)
-qseckw(p, a, b, c, beta, lambda, lower = T, log.p = FALSE)
-rseckw(n, a, b, c, beta, lambda)
-sseckw(x, a, b, c, beta, lambda)
+dseckw(x, a, b, c, lambda)
+pseckw(q, a, b, c, lambda, lower = TRUE, log.p = FALSE)
+qseckw(p, a, b, c, beta, lambda, lower = TRUE, log.p = FALSE)
+rseckw(n, a, b, c, lambda)
+hseckw(x, a, b, c, lambda)
+sseckw(x, a, b, c, lambda)
 }
 \arguments{
   \item{x, q}{
@@ -63,5 +65,5 @@ The \href{https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Weibull.html}
 }
 \examples{
 x = rseckw(1000,1,1,1,1)
-hist(x,probability = T,border = 0,ylim = c(0,1),xlim = c(0,5),main = "",ylab = "Density",lty = 2,lwd=2)
-curve(dseckw(x,1,1,1,1),add = T,lty=1,lwd=2,col=1)
+hist(x,probability = TRUE,border = 0,ylim = c(0,1),xlim = c(0,5),main = "",ylab = "Density",lty = 2,lwd=2)
+curve(dseckw(x,1,1,1,1),add = TRUE,lty=1,lwd=2,col=1)

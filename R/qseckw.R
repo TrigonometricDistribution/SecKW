@@ -11,7 +11,6 @@
 #' qseckw(p,3,0.5,2,2,TRUE,FALSE)
 
 qseckw<-function(p,a,b,c,beta,lambda,lower = TRUE,log.p = FALSE){
-  require(pracma)
 
   if (log.p == TRUE) {
     if (lower == TRUE){

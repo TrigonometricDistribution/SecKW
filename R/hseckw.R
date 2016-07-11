@@ -11,8 +11,6 @@
 #' hseckw(x,3,0.5,2,2)
 
 hseckw<-function(x,a,b,c,lambda){
-  library(stats)
-  library(pracma)
 
   ((pi/3)*(a*b*c*lambda^c*x^(c-1))*exp(-(lambda*x)^c)*(1-exp(-(lambda*x)^c))^(a-1)*(1-(1-exp(-(lambda*x)^c))^a)
   ^(b-1))*sec((pi/3)*(1-(1-(1-exp(-(lambda*x)^c))^a)^b))*

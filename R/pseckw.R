@@ -11,7 +11,6 @@
 #' pseckw(q, 3, 0.5, 2, 2,TRUE,FALSE)
 
 pseckw<-function(q,a,b,c,lambda,lower = TRUE,log.p = FALSE){
-  library(pracma)
 
   if (log.p == TRUE) {
     if (lower == TRUE) {

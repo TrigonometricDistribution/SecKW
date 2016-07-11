@@ -11,8 +11,6 @@
 #' rseckw(1000, 2, 2, 1, 1)
 
 rseckw<-function(n,a,b,c,lambda){
-  require(pracma)
-  library(fdrtool)
 
   accept = c()
   count = 0
