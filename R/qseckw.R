@@ -7,8 +7,8 @@
 #' @param lambda Lambda parameter.
 #' @return A vector with n observations of the SecantKumaraswamyWeibull distribution.
 #' @examples
-#' qseckw(p,1,1,1,TRUE,FALSE)
-#' qseckw(p,3,0.5,2,TRUE,FALSE)
+#' qseckw(p,1,1,1,1,TRUE,FALSE)
+#' qseckw(p,3,0.5,2,2,TRUE,FALSE)
 
 qseckw<-function(p,a,b,c,lambda,lower = TRUE,log.p = FALSE){
 
