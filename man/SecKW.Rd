@@ -37,7 +37,7 @@ sseckw(x, a, b, c, lambda)
   logical; if TRUE, probabilities p are given as log(p).
   }
   \item{lower}{
-  logical; if TRUE (default), probabilities are P[X ≤ x], otherwise, P[X > x].
+  logical; if TRUE (default), probabilities are \eqn{P[X \leq x]}, otherwise, \eqn{P[X > x]}.
   }
 }
 \details{
@@ -65,5 +65,8 @@ The \href{https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Weibull.html}
 }
 \examples{
 x = rseckw(1000,1,1,1,1)
-hist(x,probability = TRUE,border = 0,ylim = c(0,1),xlim = c(0,5),main = "",ylab = "Density",lty = 2,lwd=2)
-curve(dseckw(x,1,1,1,1),add = TRUE,lty=1,lwd=2,col=1)
+hist(x, probability = TRUE,
+  border = 0, ylim = c(0,1), xlim = c(0,5),
+  main = "", ylab = "Density", lty = 2,lwd=2)
+curve(dseckw(x,1,1,1,1), add=TRUE, lty=1, lwd=2, col=1)
+}

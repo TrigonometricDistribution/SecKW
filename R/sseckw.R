@@ -1,4 +1,5 @@
 #' The survival function of the SecantKumaraswamyWeibull probability distribution.
+#' @export
 #'
 #' @param x Vector of quantiles.
 #' @param a A parameter.

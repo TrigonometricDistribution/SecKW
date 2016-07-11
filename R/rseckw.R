@@ -1,4 +1,5 @@
 #' Generates random deviates from a SecantKumaraswamyWeibull probability distribution.
+#' @export
 #'
 #' @param n Number of observations to be generated.
 #' @param a A parameter.
@@ -17,10 +18,10 @@ rseckw<-function(n,a,b,c,lambda){
 
   while (length(accept) < n){
 
-    U <- rhalfnorm(1)
-    x <- rhalfnorm(1)
+    U <- fdrtool::rhalfnorm(1)
+    x <- fdrtool::rhalfnorm(1)
 
-    if(U <= dseckw(x,a,b,c,lambda)/(sqrt(pi)*dhalfnorm(x)/sqrt(2))) {
+    if(U <= dseckw(x,a,b,c,lambda)/(sqrt(pi)*fdrtool::dhalfnorm(x)/sqrt(2))) {
       accept[count] = x
       count = count + 1
     }

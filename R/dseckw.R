@@ -1,4 +1,5 @@
 #' The density function of the SecantKumaraswamyWeibull probability distribution.
+#' @export
 #'
 #' @param x Vector of quantiles.
 #' @param a A parameter.
@@ -11,5 +12,5 @@
 #' dseckw(x, 2, 2, 1, 1)
 
 dseckw<-function(x,a,b,c,lambda){
-  (pi/3)*(a*b*c*lambda^c*x^(c-1)*exp(-(lambda*x)^c)*(1-exp(-lambda*x)^c)^(a-1)*(1-(1-exp(-lambda*x)^c)^a)^(b-1))*sec((pi/3)*(1-(1-(1-exp(-(lambda*x)^c))^a)^b))*tan((pi/3)*(1-(1-(1-exp(-(lambda*x)^c))^a)^b))
+  (pi/3)*(a*b*c*lambda^c*x^(c-1)*exp(-(lambda*x)^c)*(1-exp(-lambda*x)^c)^(a-1)*(1-(1-exp(-lambda*x)^c)^a)^(b-1))*pracma::sec((pi/3)*(1-(1-(1-exp(-(lambda*x)^c))^a)^b))*tan((pi/3)*(1-(1-(1-exp(-(lambda*x)^c))^a)^b))
 }

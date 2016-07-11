@@ -1,4 +1,5 @@
 #' The cumulative function of the SecantKumaraswamyWeibull probability distribution.
+#' @export
 #'
 #' @param q Vector of quantiles.
 #' @param a A parameter.
