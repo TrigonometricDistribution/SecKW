@@ -30,7 +30,7 @@ sseckw(x, a, b, c, lambda)
   \item{n}{
   number of observations. If length(n) > 1, the length is taken to be the number required.
   }
-  \item{a, b, c, beta, lambda}{
+  \item{a, b, c, lambda}{
   parameters.
   }
   \item{log.p}{
