@@ -1,15 +1,18 @@
 #' The cumulative function of the SecantKumaraswamyWeibull probability distribution.
 #' @export
+#' @importFrom pracma sec
 #'
 #' @param q Vector of quantiles.
 #' @param a A parameter.
 #' @param b B parameter.
 #' @param c C parameter.
 #' @param lambda Lambda parameter.
-#' @return A vector with n observations of the SecantKumaraswamyWeibull distribution.
+#' @param lower logical; if TRUE (default), probabilities are \eqn{P[X \leq x]} otherwise, \eqn{P[X > x]}.
+#' @param log.p logical; if TRUE, probabilities p are given as log(p).
+#' @return A vector with n observations of the Secant Kumaraswamy Weibull distribution.
 #' @examples
-#' pseckw(q, 1, 1, 1, 1,TRUE,FALSE)
-#' pseckw(q, 3, 0.5, 2, 2,TRUE,FALSE)
+#' pseckw(0.5, 1, 1, 1, 1,TRUE,FALSE)
+#' pseckw(0.5, 3, 0.5, 2, 2,TRUE,FALSE)
 
 pseckw<-function(q,a,b,c,lambda,lower = TRUE,log.p = FALSE){
 
